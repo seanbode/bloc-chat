@@ -10,6 +10,8 @@
       $firebaseArray.$add(room)
     }
 
+    Room.name = "Test"
+
     return Room;
   }
 
