@@ -11,6 +11,7 @@
     }
 
     Room.name = "Test"
+    // Room.name = $firebaseArray.room.name?
 
     return Room;
   }
