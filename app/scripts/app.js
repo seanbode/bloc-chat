@@ -1,18 +1,18 @@
 angular
   .module('blocChat', ['ui.router', 'firebase'])
   .config(function($stateProvider, $locationProvider, $urlRouterProvider, ) {
-    $stateProvider
-      .state('home', {
-          url: '/',
-          controller: 'HomeCtrl as home',
-          templateUrl: '/templates/home.html'
-      })
-      .state('room', {
-           url: '/room',
-           controller: 'RoomCtrl',
-           templateUrl: '/pages/index.html'
-       })
-    $urlRouterProvider.otherwise('/');
+    // // $stateProvider
+    // //   .state('home', {
+    // //       url: '/',
+    // //       controller: 'HomeCtrl as home',
+    // //       templateUrl: '/templates/home.html'
+    // //   })
+    // //   .state('room', {
+    // //        url: '/room',
+    // //        controller: 'RoomCtrl',
+    // //        templateUrl: '/pages/index.html'
+    // //    })
+    // $urlRouterProvider.otherwise('/');
     var config = {
       apiKey: "AIzaSyBIAJTB01QWRVb9FtuXrQFj380tCefc1w4", // Your Firebase API key
       authDomain: "bloc-chat-117d5.firebaseapp.com",        // Your Firebase Auth domain ("*.firebaseapp.com")

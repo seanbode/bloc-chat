@@ -14,8 +14,14 @@
   <link rel="stylesheet" type="text/css" href="/styles/style.css" />
   <!-- <link rel="stylesheet" href=""> -->
 </head>
-<body class="home">
-  <ui-view></ui-view>
+<body class="home" ng-controller="ChatCtrl">
+  <!-- <ng-include src="'/templates/home.html'"></ng-include> -->
+  <h1>Bloc Chat</h1>
+  <h2>{{ roomName }}</h2>
+  <ul><li ng-repeat="room in rooms"><a ng-click="goToRoom(room)">{{ room.name }}</a></li></ul>
+  <h1>Room: {{ selectedRoom.name }}<h1>
+    <h2>Room Html<h2>
+    <div><li ng-repeat="message in messages">{{ message.text }}</li></div>
   <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
   <!-- commented out because of err with multiloading of angular <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -30,8 +36,10 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></script> -->
   <!-- app scripts -->
   <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers/ChatCtrl.js"></script>
   <script src="/scripts/controllers/HomeCtrl.js"></script>
   <script src="/scripts/controllers/RoomCtrl.js"></script>
+  <script src="/scripts/factory/Message.js"></script>
   <script src="/scripts/factory/Room.js"></script>
 </body>
 </html>
