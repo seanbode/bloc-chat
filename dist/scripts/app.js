@@ -1,6 +1,6 @@
 angular
-  .module('blocChat', ['ui.router', 'firebase'])
-  .config(function($stateProvider, $locationProvider, $urlRouterProvider, ) {
+  .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+  .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
     // // $stateProvider
     // //   .state('home', {
     // //       url: '/',
@@ -22,4 +22,13 @@ angular
       messagingSenderId: "324260113714"
     };
     firebase.initializeApp(config);
-  });
+  }).run(function($uibModal) {
+    // var currentUser = $cookies.get('blocChatCurrentUser');
+    // if (!currentUser || currentUser === '') {
+      $uibModal.open({
+        url: '/username'
+        template: "username",
+        templateUrl: "/templates/username.html"
+      })
+    // }
+  })
