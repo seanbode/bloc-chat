@@ -6,8 +6,10 @@ angular.module("blocChat", ['ui.bootstrap'])
     })
   })
   .controller("ModalCtrl", function($uibModalInstance, $scope) {
-    $scope.user.name = "John";
-    $scope.user.password = "test";
+    $scope.user = {
+      username: "John",
+      password: "test"
+    }
 
     // $scope.login = function() {
       // $http.post("/myapp/login", $scope.user).then(function() {

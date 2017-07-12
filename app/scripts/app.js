@@ -1,6 +1,6 @@
 angular
-  .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
-  .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
+  .module('blocChat', ['firebase', 'ui.bootstrap'])
+  .config(function($locationProvider) {
     // // $stateProvider
     // //   .state('home', {
     // //       url: '/',
