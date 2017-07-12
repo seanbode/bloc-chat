@@ -22,13 +22,18 @@ angular
       messagingSenderId: "324260113714"
     };
     firebase.initializeApp(config);
-  }).run(function($uibModal) {
-    // var currentUser = $cookies.get('blocChatCurrentUser');
-    // if (!currentUser || currentUser === '') {
-      $uibModal.open({
-        url: '/username'
-        template: "username",
-        templateUrl: "/templates/username.html"
-      })
-    // }
   })
+  // .run(function($uibModal) {
+  //   // var currentUser = $cookies.get('blocChatCurrentUser');
+  //   // if (!currentUser || currentUser === '') {
+  //     // $uibModal.open({
+  //     //   url: '/username',
+  //     //   controller: "UsernameCtrl.js",
+  //     //   templateUrl: "/templates/username.html"
+  //     // })
+  //   // }
+  //   $uibModal.open({
+  //     controller: "ModalCtrl",
+  //     templateUrl: "/templates/username.html"
+  //   })
+  // })

@@ -12,4 +12,4 @@ angular.module("blocChat").controller("ChatCtrl", function($scope, Message, Room
   }
   $scope.message = function() {
   }
-})
+});

@@ -1,0 +1,30 @@
+angular.module("blocChat", ['ui.bootstrap'])
+  .controller("UsernameCtrl", function($scope, $uibModal) {
+    $uibModal.open({
+      controller: "ModalCtrl",
+      templateUrl: "/templates/username.html"
+    })
+  })
+  .controller("ModalCtrl", function($uibModalInstance, $scope) {
+    $scope.user.name = "John";
+    $scope.user.password = "test";
+
+    // $scope.login = function() {
+      // $http.post("/myapp/login", $scope.user).then(function() {
+      // $uibModalInstance.close("ok");
+    // }
+  })
+  .run(function($uibModal) {
+    // var currentUser = $cookies.get('blocChatCurrentUser');
+    // if (!currentUser || currentUser === '') {
+      // $uibModal.open({
+      //   url: '/username',
+      //   controller: "UsernameCtrl.js",
+      //   templateUrl: "/templates/username.html"
+      // })
+    // }
+    $uibModal.open({
+      controller: "ModalCtrl",
+      templateUrl: "/templates/username.html"
+    })
+  })
