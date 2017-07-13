@@ -1,4 +1,5 @@
 angular.module("blocChat")
+  // "use strict";
   .controller("ChatCtrl", function($scope, Message, Room) {
     $scope.roomName
 

@@ -1,4 +1,4 @@
-angular.module("blocChat", ['ui.bootstrap'])
+angular.module("blocChat")
   .controller("UsernameCtrl", function($scope, $uibModal) {
     $uibModal.open({
       controller: "ModalCtrl",

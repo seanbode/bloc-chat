@@ -1,18 +1,6 @@
 angular
   .module('blocChat', ['firebase', 'ui.bootstrap'])
   .config(function($locationProvider) {
-    // // $stateProvider
-    // //   .state('home', {
-    // //       url: '/',
-    // //       controller: 'HomeCtrl as home',
-    // //       templateUrl: '/templates/home.html'
-    // //   })
-    // //   .state('room', {
-    // //        url: '/room',
-    // //        controller: 'RoomCtrl',
-    // //        templateUrl: '/pages/index.html'
-    // //    })
-    // $urlRouterProvider.otherwise('/');
     var config = {
       apiKey: "AIzaSyBIAJTB01QWRVb9FtuXrQFj380tCefc1w4", // Your Firebase API key
       authDomain: "bloc-chat-117d5.firebaseapp.com",        // Your Firebase Auth domain ("*.firebaseapp.com")
@@ -23,17 +11,3 @@ angular
     };
     firebase.initializeApp(config);
   })
-  // .run(function($uibModal) {
-  //   // var currentUser = $cookies.get('blocChatCurrentUser');
-  //   // if (!currentUser || currentUser === '') {
-  //     // $uibModal.open({
-  //     //   url: '/username',
-  //     //   controller: "UsernameCtrl.js",
-  //     //   templateUrl: "/templates/username.html"
-  //     // })
-  //   // }
-  //   $uibModal.open({
-  //     controller: "ModalCtrl",
-  //     templateUrl: "/templates/username.html"
-  //   })
-  // })
