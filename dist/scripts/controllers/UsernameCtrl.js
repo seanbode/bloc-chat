@@ -5,16 +5,17 @@ angular.module("blocChat")
       templateUrl: "/templates/username.html"
     })
   })
-  .controller("ModalCtrl", function($uibModalInstance, $scope) {
+  .controller("ModalCtrl", function($uibModalInstance, $scope, $cookies) {
     $scope.user = {
-      username: "John",
-      password: "test"
+      username: $cookies.get("username")
+      // password: $cookies.get("password")
     }
 
-    // $scope.login = function() {
+    $scope.login = function() {
       // $http.post("/myapp/login", $scope.user).then(function() {
-      // $uibModalInstance.close("ok");
-    // }
+      $cookies.put("username", $scope.user.username)
+      $uibModalInstance.close("ok");
+    }
   })
   .run(function($uibModal) {
     // var currentUser = $cookies.get('blocChatCurrentUser');

@@ -1,5 +1,5 @@
 angular
-  .module('blocChat', ['firebase', 'ui.bootstrap'])
+  .module('blocChat', ['firebase', 'ui.bootstrap', 'ngCookies'])
   .config(function($locationProvider) {
     var config = {
       apiKey: "AIzaSyBIAJTB01QWRVb9FtuXrQFj380tCefc1w4", // Your Firebase API key
