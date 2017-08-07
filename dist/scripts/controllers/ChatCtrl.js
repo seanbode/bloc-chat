@@ -15,6 +15,7 @@ angular.module("blocChat")
       $scope.messages.push({username:$cookies.get("username"), text:$scope.currentMessage})
       // $cookies.get("username")
       // $scope.messages = ""
+      Message.send({username:$cookies.get("username"), text:$scope.currentMessage})
     }
     // $scope.goToRoom = function(room) {
       // $scope.selectedRoom = room

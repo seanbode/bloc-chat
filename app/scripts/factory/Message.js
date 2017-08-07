@@ -10,6 +10,9 @@
       return ref.orderByChild("roomId").equalTo(roomId)
     };
 
+    Message.send = function(message) {
+      messages.$add(message)
+    }
     // $scope.messages
     return Message;
   }

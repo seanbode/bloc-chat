@@ -14,6 +14,7 @@ angular.module("blocChat")
     $scope.login = function() {
       // $http.post("/myapp/login", $scope.user).then(function() {
       $cookies.put("username", $scope.user.username)
+      // console.log($scope.user.username)
       $uibModalInstance.close("ok");
     }
   })
